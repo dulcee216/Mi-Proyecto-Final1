@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Global</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Aquí puedes enlazar a tu CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #34495e;
+        }
+        nav ul li {
+            margin: 1rem;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        .hero {
+            background-image: url('restaurant-image.jpg'); /* Reemplaza por la imagen de tu restaurante */
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+        .hero h1 {
+            font-size: 3rem;
+        }
+        .menu {
+            padding: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .menu-item {
+            background-color: #fff;
+            border-radius: 8px;
+            width: 30%;
+            margin: 10px;
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .menu-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <h1>Restaurante Global</h1>
+        <p>¡Sabores del mundo en un solo lugar!</p>
+    </header>
+
+    <!-- Barra de Navegación -->
+    <nav>
+        <ul>
+            <li><a href="#menu">Menú</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#reserva">Reservas</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección Hero -->
+    <div class="hero">
+        <h1>¡Bienvenido a Restaurante Global!</h1>
+        <p>Disfruta de los mejores platos y postres de todo el mundo</p>
+    </div>
+
+    <!-- Menú -->
+    <section id="menu" class="menu">
+        <div class="menu-item">
+            <img src="ceviche.jpg" alt="Ceviche">
+            <h3>Ceviche Peruano</h3>
+            <p>Un plato refrescante con pescado fresco y cítricos.</p>
+            <p>$15.00</p>
+        </div>
+        <div class="menu-item">
+            <img src="paella.jpg" alt="Paella">
+            <h3>Paella Española</h3>
+            <p>Un delicioso arroz con mariscos y vegetales.</p>
+            <p>$20.00</p>
+        </div>
+        <div class="menu-item">
+            <img src="baklava.jpg" alt="Baklava">
+            <h3>Baklava Turco</h3>
+            <p>Deliciosa mezcla de nueces y miel en hojaldre.</p>
+            <p>$8.00</p>
+        </div>
+    </section>
+
+    <!-- Galería -->
+    <section id="galeria">
+        <h2>Galería de Nuestros Platos</h2>
+        <div style="display: flex; justify-content: space-around;">
+            <img src="plato1.jpg" alt="Plato 1" style="width: 30%; height: auto;">
+            <img src="plato2.jpg" alt="Plato 2" style="width: 30%; height: auto;">
+            <img src="plato3.jpg" alt="Plato 3" style="width: 30%; height: auto;">
+        </div>
+    </section>
+
+    
+
+   
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Restaurante Global. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

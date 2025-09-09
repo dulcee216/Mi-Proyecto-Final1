@@ -1,0 +1,46 @@
+<!-- Formulario con estilo culinario -->
+<form
+  action="https://formspree.io/f/manbgnzq"
+  method="POST"
+  style="max-width: 500px; margin: auto; background: #fffaf0; padding: 20px; border-radius: 10px; font-family: 'Arial', sans-serif; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"
+>
+  <h2 style="text-align:center; color:#d2691e;">🍝 Contáctanos - El Rincón del Sabor</h2>
+
+  <label style="display:block; margin-bottom:10px;">
+    📧 Tu correo electrónico:
+    <input 
+      type="email" 
+      name="email" 
+      required 
+      placeholder="chef@ejemplo.com"
+      style="width:100%; padding:10px; border-radius:5px; border:1px solid #ccc; margin-top:5px;"
+    >
+  </label>
+
+  <label style="display:block; margin-bottom:10px;">
+    📝 Tu pedido, duda o comentario:
+    <textarea 
+      name="message" 
+      required 
+      placeholder="Cuéntanos tu antojo o haz tu reserva..." 
+      style="width:100%; padding:10px; border-radius:5px; border:1px solid #ccc; margin-top:5px; min-height:100px;"
+    ></textarea>
+  </label>
+
+  <!-- Otros campos opcionales -->
+  <label style="display:block; margin-bottom:10px;">
+    🍽️ Tipo de solicitud:
+    <select name="tipo" style="width:100%; padding:10px; border-radius:5px; border:1px solid #ccc;">
+      <option value="reserva">Reserva de mesa</option>
+      <option value="pedido">Pedido a domicilio</option>
+      <option value="consulta">Consulta general</option>
+    </select>
+  </label>
+
+  <button 
+    type="submit" 
+    style="background-color:#d2691e; color:white; padding:10px 20px; border:none; border-radius:5px; cursor:pointer; font-weight:bold;"
+  >
+    🍴 Enviar
+  </button>
+</form>

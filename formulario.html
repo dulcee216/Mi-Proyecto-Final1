@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Formulario - Mariedel Restaurante</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Arial', sans-serif;
+      color: #4a4a4a;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: url('https://images.unsplash.com/photo-1562440499-84efcf0f96b9?auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+      background-size: cover;
+      filter: brightness(0.5) saturate(0.8);
+      z-index: -1;
+    }
+    .overlay {
+      background-color: rgba(255, 248, 250, 0.9);
+      min-height: 100vh;
+      padding: 40px 20px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    form {
+      max-width: 720px;
+      width: 100%;
+      background-color: #fff0f2;
+      padding: 30px 40px 50px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(255, 192, 203, 0.3);
+    }
+    h1 {
+      text-align: center;
+      color: #6b4c4c;
+      margin-bottom: 30px;
+      font-weight: 700;
+      font-size: 2.8em;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #a05050;
+    }
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px 15px;
+      margin-bottom: 20px;
+      border: 2px solid #ffc0cb;
+      border-radius: 8px;
+      font-size: 1em;
+      font-family: inherit;
+      box-sizing: border-box;
+      transition: border-color 0.3s ease;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #ff69b4;
+      outline: none;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+    button {
+      background-color: #ffb6c1;
+      color: #6b4c4c;
+      font-size: 1.2em;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 700;
+      transition: background-color 0.3s ease;
+      display: block;
+      margin: 20px auto 0;
+    }
+    button:hover {
+      background-color: #ff69b4;
+      color: #fff;
+    }
+    @media (max-width: 768px) {
+      form {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <form action="https://formspree.io/f/maylnkqv" method="POST" autocomplete="off">
+      <h1>¿Cómo fue tu experiencia con nosotros?</h1>
+
+      <label for="nombre">1. Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo" aria-label="Nombre completo">
+
+      <label for="email">2. Correo electrónico:</label>
+      <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com" aria-label="Correo electrónico">
+
+      <label for="plato-favorito">3. ¿Cuál es tu plato favorito en nuestro restaurante?</label>
+      <input type="text" id="plato-favorito" name="plato-favorito" required placeholder="Escribe tu plato favorito" aria-label="Plato favorito">
+
+      <label for="frecuencia">4. ¿Con qué frecuencia visitas Mariedel?</label>
+      <select id="frecuencia" name="frecuencia" required aria-label="Frecuencia de visita">
+        <option value="" disabled>Selecciona una opción</option>
+        <option value="primera vez">Primera vez</option>
+        <option value="ocasionalmente">Ocasionalmente</option>
+        <option value="frecuentemente">Frecuentemente</option>
+        <option value="soy cliente habitual">Soy cliente habitual</option>
+      </select>
+
+      <label for="calificacion">5. ¿Cómo calificarías la calidad de nuestra comida?</label>
+      <select id="calificacion" name="calificacion" required aria-label="Calidad de la comida">
+        <option value="" disabled>Selecciona una opción</option>
+        <option value="excelente">Excelente</option>
+        <option value="buena">Buena</option>
+        <option value="regular">Regular</option>
+        <option value="mala">Mala</option>
+      </select>
+
+      <label for="ambiente">6. ¿Qué te parece el ambiente del restaurante?</label>
+      <select id="ambiente" name="ambiente" required aria-label="Ambiente del restaurante">
+        <option value="" disabled>Selecciona una opción</option>
+        <option value="muy agradable">Muy agradable</option>
+        <option value="agradable">Agradable</option>
+        <option value="normal">Normal</option>
+        <option value="poco acogedor">Poco acogedor</option>
+      </select>
+
+      <label for="servicio">7. ¿Cómo calificarías la atención del personal?</label>
+      <select id="servicio" name="servicio" required aria-label="Atención del personal">
+        <option value="" disabled>Selecciona una opción</option>
+        <option value="excelente">Excelente</option>
+        <option value="buena">Buena</option>
+        <option value="regular">Regular</option>
+        <option value="mala">Mala</option>
+      </select>
+
+      <label for="mejoras">8. ¿Qué mejorarías en nuestro restaurante?</label>
+      <textarea id="mejoras" name="mejoras" placeholder="Escribe tus sugerencias aquí..." aria-label="Sugerencias"></textarea>
+
+      <label for="recomendacion">9. ¿Nos recomendarías a tus amigos o familiares?</label>
+      <select id="recomendacion" name="recomendacion" required aria-label="Recomendación">
+        <option value="" disabled>Selecciona una opción</option>
+        <option value="sí">Sí</option>
+        <option value="no">No</option>
+        <option value="tal vez">Tal vez</option>
+      </select>
+
+      <label for="comentarios">10. Comentarios adicionales:</label>
+      <textarea id="comentarios" name="comentarios" placeholder="Escribe aquí cualquier otro comentario..." aria-label="Comentarios adicionales"></textarea>
+
+      <button type="submit">Enviar formulario</button>
+    </form>
+  </div>
+</body>
+</html>

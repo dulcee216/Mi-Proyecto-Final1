@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Formulario de Contacto - El Rincón del Sabor</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff8f0;
+      background-image: url('https://images.unsplash.com/photo-1551218808-94e220e084d2');
+      background-size: cover;
+      background-position: center;
+      backdrop-filter: blur(5px);
+      color: #333;
+    }
+
+    .form-container {
+      background-color: rgba(255, 255, 255, 0.95);
+      max-width: 600px;
+      margin: 60px auto;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .form-container h2 {
+      text-align: center;
+      color: #c0392b;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      background-color: #e74c3c;
+      color: white;
+      padding: 15px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #c0392b;
+    }
+
+    .dish-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 600px) {
+      .form-container {
+        margin: 20px;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt="Plato delicioso" class="dish-image">
+
+    <h2>🍴 Contáctanos - El Rincón del Sabor</h2>
+
+    <form action="https://formspree.io/f/manbgnzq" method="POST">
+      <label for="nombre">👤 ¿Cuál es tu nombre?</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
+
+      <label for="email">📧 ¿Cuál es tu correo electrónico?</label>
+      <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
+
+      <label for="telefono">📞 ¿Tu número de teléfono?</label>
+      <input type="tel" id="telefono" name="telefono" placeholder="Ej: 5512345678">
+
+      <label for="tipo">🍽️ ¿Qué deseas hacer?</label>
+      <select id="tipo" name="tipo" required>
+        <option value="">Selecciona una opción</option>
+        <option value="reserva">Reservar una mesa</option>
+        <option value="pedido">Hacer un pedido a domicilio</option>
+        <option value="consulta">Realizar una consulta</option>
+      </select>
+
+      <label for="personas">👥 ¿Para cuántas personas es la reserva o el pedido?</label>
+      <input type="number" id="personas" name="personas" min="1" placeholder="Ej: 4">
+
+      <label for="fecha">📅 ¿Qué día deseas reservar?</label>
+      <input type="date" id="fecha" name="fecha">
+
+      <label for="hora">🕒 ¿A qué hora?</label>
+      <input type="time" id="hora" name="hora">
+
+      <label for="preferencias">🥗 ¿Tienes alguna preferencia alimenticia o alergia?</label>
+      <textarea id="preferencias" name="preferencias" placeholder="Ej: Sin gluten, vegetariano, alérgico a nueces..."></textarea>
+
+      <label for="mensaje">📝 Cuéntanos más detalles o comentarios:</label>
+      <textarea id="mensaje" name="message" rows="4" placeholder="Escribe aquí cualquier detalle adicional..." required></textarea>
+
+      <button type="submit">Enviar solicitud 🍕</button>
+    </form>
+  </div>
+
+</body>
+</html>
